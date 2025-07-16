@@ -51,27 +51,31 @@
   <!-- Main Section -->
   <main class="main relative z-10">
     <!-- Search and Filter Box -->
-    <div class="bg-white dark:bg-gray-800 max-w-5xl mx-auto mt-8 mb-10 p-6 rounded-2xl shadow-lg flex flex-col sm:flex-row gap-4 items-center justify-between">
-      <input id="searchInput" type="text" placeholder="Search job title..." oninput="filterJobs()" class="w-full sm:w-1/3 px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600">
+    <div class="bg-white dark:bg-gray-800 max-w-5xl mx-auto mt-8 mb-10 p-6 rounded-2xl shadow-lg grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <input id="searchInput" type="text" placeholder="Search job title..."
+    oninput="filterJobs()"
+    class="w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-blue-300 dark:bg-gray-900 dark:text-white">
 
-      <select id="jobType" onchange="filterJobs()" class="w-full sm:w-1/4 px-4 py-2 border rounded-xl shadow-sm dark:bg-gray-700 dark:border-gray-600">
-        <option value="All">All Types</option>
-        <option value="Full-Time">Full-Time</option>
-        <option value="Part-Time">Part-Time</option>
-        <option value="WFH">Work From Home</option>
-      </select>
+  <select id="jobType" onchange="filterJobs()" class="w-full px-4 py-2 border rounded-xl shadow-sm dark:bg-gray-900 dark:text-white">
+    <option value="All">All Types</option>
+    <option value="Full-Time">Full-Time</option>
+    <option value="Part-Time">Part-Time</option>
+    <option value="WFH">Work From Home</option>
+  </select>
 
-      <select id="jobLocation" onchange="filterJobs()" class="w-full sm:w-1/4 px-4 py-2 border rounded-xl shadow-sm dark:bg-gray-700 dark:border-gray-600">
-        <option value="All">All Locations</option>
-        <option value="Remote">Remote</option>
-        <option value="Delhi">Delhi</option>
-        <option value="Bangalore">Bangalore</option>
-      </select>
+  <select id="jobLocation" onchange="filterJobs()" class="w-full px-4 py-2 border rounded-xl shadow-sm dark:bg-gray-900 dark:text-white">
+    <option value="All">All Locations</option>
+    <option value="Remote">Remote</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Bangalore">Bangalore</option>
+  </select>
 
-      <button onclick="showAdminForm()" class="w-full sm:w-auto bg-purple-600 text-white px-5 py-2 rounded-xl hover:bg-purple-700 transition flex items-center justify-center gap-2">
-        🔒 Admin Login
-      </button>
-    </div>
+  <button onclick="showAdminForm()"
+    class="w-full bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700 transition text-sm">
+    🔒 Admin Login
+  </button>
+</div>
+
 
     <!-- Admin Form -->
     <div id="adminForm" style="display:none" class="admin-form bg-white dark:bg-gray-800 rounded-2xl shadow-lg max-w-2xl mx-auto p-6 mb-8">
