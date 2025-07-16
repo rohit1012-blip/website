@@ -197,3 +197,16 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+:root {
+  color-scheme: light;
+}
+#tsparticles {
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #e0f2fe, #ffffff); /* light background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
