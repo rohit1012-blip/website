@@ -2,26 +2,38 @@ html, body {
   min-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+  color: #1f2937;
 }
 
 body {
-  background: linear-gradient(to bottom right, #eff6ff, white);
   position: relative;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #tsparticles {
   pointer-events: none;
   z-index: -1;
+  background: #cbd5e1; /* lighter neutral background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .header {
   z-index: 10;
-  background: #2563eb;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
   color: white;
-  padding: 1.5rem 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.header h1 span {
+  color: #2563eb; /* blue JobHunt.in text */
 }
 
 .main {
@@ -30,6 +42,9 @@ body {
   margin: 2.5rem auto;
   padding: 0 1rem 4rem;
   position: relative;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .filters {
@@ -63,6 +78,7 @@ body {
   border-radius: 0.75rem;
   transition: background 0.3s;
   text-align: center;
+  font-weight: 600;
 }
 
 .btn-blue:hover {
@@ -70,19 +86,20 @@ body {
 }
 
 .btn-purple {
-  background: #7c3aed;
+  background: #9333ea;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 0.75rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .btn-purple:hover {
-  background: #6d28d9;
+  background: #7e22ce;
 }
 
 .admin-form {
-  background: white;
+  background: #f9fafb;
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -130,6 +147,8 @@ body {
 
   .main {
     padding: 0 0.5rem 3rem;
+    margin: 1rem;
+    border-radius: 0.75rem;
   }
 
   .input, select, .btn-blue, .btn-purple {
@@ -146,6 +165,7 @@ body {
   .job-card {
     padding: 1rem !important;
     font-size: 14px;
+    margin-bottom: 1rem;
   }
 
   .category-btn {
@@ -161,4 +181,19 @@ body {
     padding: 0 1rem;
     font-size: 1rem;
   }
+}
+
+/* Job card styling */
+.job-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
