@@ -25,7 +25,7 @@ function renderJobs(jobs) {
 
   jobs.forEach(job => {
     const card = document.createElement('div');
-    card.className = "job-card p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 border hover:shadow-xl transition duration-300";
+    card.className = "job-card p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 border hover:shadow-xl transition duration-300 flex flex-col justify-between";
     card.dataset.title = job.title.toLowerCase();
     card.dataset.type = job.type;
     card.dataset.location = job.location;
@@ -33,13 +33,13 @@ function renderJobs(jobs) {
     const icon = job.type === 'WFH' ? '🏠' : job.type === 'Full-Time' ? '💼' : '⏰';
 
     card.innerHTML = `
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">${icon} ${job.title}</h2>
-        <span class="text-sm px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-medium">${job.type}</span>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-white">${icon} ${job.title}</h2>
+        <span class="text-xs sm:text-sm px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-medium w-max">${job.type}</span>
       </div>
-      <p class="text-sm text-gray-500 mt-1">📍 ${job.location}</p>
+      <p class="text-sm text-gray-500 mt-2">📍 ${job.location}</p>
       <p class="text-sm text-gray-500">🏢 ${job.company}</p>
-      <a href="verify.html" class="inline-block mt-4 px-5 py-2 bg-green-500 text-white rounded-xl hover:bg-green-600 transition">Apply Now</a>
+      <a href="verify.html" class="inline-block mt-4 px-4 sm:px-5 py-2 bg-green-500 text-white rounded-xl hover:bg-green-600 transition text-center">Apply Now</a>
     `;
 
     container.appendChild(card);
@@ -140,6 +140,5 @@ window.onload = () => {
     document.documentElement.classList.add('dark');
   }
 };
-
 
 
