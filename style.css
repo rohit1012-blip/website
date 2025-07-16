@@ -14,7 +14,7 @@ body {
 #tsparticles {
   pointer-events: none;
   z-index: -1;
-  background: #cbd5e1; /* lighter neutral background */
+  background: #e0f7ff; /* softer animated background */
   position: absolute;
   top: 0;
   left: 0;
@@ -24,23 +24,24 @@ body {
 
 .header {
   z-index: 10;
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
-  color: white;
+  background: white;
+  color: #1f2937;
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 1rem;
+  margin: 1rem;
 }
 
 .header h1 span {
-  color: #2563eb; /* blue JobHunt.in text */
+  color: #2563eb;
 }
 
 .main {
   z-index: 10;
   max-width: 960px;
   margin: 2.5rem auto;
-  padding: 0 1rem 4rem;
+  padding: 1rem;
   position: relative;
   background: white;
   border-radius: 1rem;
@@ -146,7 +147,7 @@ body {
   }
 
   .main {
-    padding: 0 0.5rem 3rem;
+    padding: 0.5rem;
     margin: 1rem;
     border-radius: 0.75rem;
   }
@@ -178,8 +179,8 @@ body {
   }
 
   .header h1, .header p {
-    padding: 0 1rem;
     font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }
 
@@ -196,17 +197,4 @@ body {
 .job-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-:root {
-  color-scheme: light;
-}
-#tsparticles {
-  pointer-events: none;
-  z-index: -1;
-  background: linear-gradient(to bottom right, #e0f2fe, #ffffff); /* light background */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
