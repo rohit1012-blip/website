@@ -91,6 +91,7 @@ body {
   font-size: 0.875rem;
   color: #6b7280;
 }
+
 .category-btn {
   padding: 0.5rem 1.5rem;
   background-color: white;
@@ -102,6 +103,8 @@ body {
   font-weight: 500;
   transition: 0.3s;
   color: black;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
 }
 
 .category-btn:hover {
@@ -113,8 +116,37 @@ body {
   color: white;
 }
 
+/* Mobile responsiveness improvements */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 
-.category-btn {
-  /* existing styles... */
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+  .main {
+    padding: 0 0.5rem 3rem;
+  }
+
+  .input, select, .btn-blue, .btn-purple {
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .admin-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .job-card {
+    padding: 1rem !important;
+    font-size: 14px;
+  }
+
+  .category-btn {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
 }
