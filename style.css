@@ -198,3 +198,28 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: linear-gradient(to bottom right, #e0f2fe, #ffffff) !important;
+    color: #1f2937 !important;
+  }
+
+  .main,
+  .header,
+  .admin-form,
+  .job-card {
+    background: white !important;
+    color: #1f2937 !important;
+  }
+
+  .input,
+  select {
+    background: white !important;
+    color: #1f2937 !important;
+  }
+
+  .btn-blue,
+  .btn-purple {
+    color: white !important;
+  }
+}
